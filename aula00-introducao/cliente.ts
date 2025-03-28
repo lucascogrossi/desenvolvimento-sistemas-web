@@ -6,7 +6,7 @@ export default class Cliente{
     private _cpf : number;
     private _data_nascimento : number;
     private _endereco : Endereco;
-    private _telefones : Telefone[];
+    private _telefones : Telefone[] = [];
 
     constructor(nome : string, cpf : number, data_nascimento : number, endereco : Endereco, telefones : Telefone[]) {
         this._nome = nome;

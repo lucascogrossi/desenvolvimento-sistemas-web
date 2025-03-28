@@ -1,10 +1,10 @@
 export default class Endereco {
     private _rua : string;
-    private _numero : string;
+    private _numero : number;
     private _cidade : string;
     private _estado : string;
 
-    constructor(rua : string, numero : string, cidade : string, estado : string) {
+    constructor(rua : string, numero : number, cidade : string, estado : string) {
         this._rua = rua;
         this._numero = numero;
         this._cidade = cidade;
@@ -19,11 +19,11 @@ export default class Endereco {
         this._rua = rua;
     }
 
-    get numero() : string {
+    get numero() : number {
         return this._numero;
     }
 
-    set numero(numero : string) {
+    set numero(numero : number) {
         this._numero = numero;
     }
 
