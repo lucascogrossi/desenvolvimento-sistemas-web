@@ -7,11 +7,11 @@ export default class Venda {
     private _cliente : Cliente;
     private _produtos : Produto[] = [];
     
-    constructor(codigo : number, data : number, cliente : Cliente) {
+    constructor(codigo : number, data : number, cliente : Cliente, produtos : Produto[]) {
         this._codigo = codigo;
         this._data = data;
         this._cliente = cliente;
-
+        this._produtos = produtos
     }
 
     get codigo() : number {
@@ -44,5 +44,13 @@ export default class Venda {
 
     set produtos(produtos : Produto[]) {
         this._produtos = produtos;
+    }
+
+    public calcularTotal() : number {
+        let total = 0;
+        for (let i = 0; i < this._produtos.length; i++) {
+            total += this._produtos[i].valor;
+        }
+        return total;
     }
 }

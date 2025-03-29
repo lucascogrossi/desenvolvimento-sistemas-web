@@ -13,6 +13,7 @@ export default class Cliente{
         this._cpf = cpf;
         this._data_nascimento = data_nascimento;
         this._endereco = endereco;
+        this._telefones = telefones;
     }
 
     get nome() : string {
